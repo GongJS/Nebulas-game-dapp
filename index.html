@@ -127,11 +127,10 @@
            alert ("Extension wallet is not installed, please install it first.");
            return ;
         }
-       var to = "n1eUexY5tSRu5fniKLzZGjLmF3BNhEpDGJf";
-       var value = "1";
-       var callFunction = "clipIn";
-       var callArgs =[number];
-       console.log(typeof(callArgs));
+       var to = "n1eUexY5tSRu5fniKLzZGjLmF3BNhEpDGJf";  //合约地址
+       var value = "1";   //往合转的NAS数量
+       var callFunction = "clipIn";  //调用合约的clipIn函数
+       var callArgs =[number];  //传入使用者挑选的数字
        console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
              qrcode: {
